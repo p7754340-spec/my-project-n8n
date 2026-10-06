@@ -1,0 +1,80 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 23,
+              "triggerAtMinute": 5
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "3b9f22ef-9085-425f-b6b6-93f034928bd2",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "sarojinit121@gmail.com",
+        "subject": "hello",
+        "emailType": "text",
+        "message": "enna panra",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "a0f6aab5-d9f2-40a2-a4da-dbe08c860f6b",
+      "name": "Send a message",
+      "webhookId": "e0b10758-c6b2-4561-8aaa-978587c2ec22",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "wn0dqlGrNAI9zedY",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": -1,
+    "availableInMCP": false
+  },
+  "versionId": "5c039222-22ef-447e-ac36-3042a488ee35",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "4d839895f6ab96789499898b1d12b7b62560b6272efbf8f3ac9bacbb8176c039"
+  },
+  "nodeGroups": [],
+  "id": "xN9UpC1QX2twuUEA",
+  "tags": []
+}
